@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 7%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
+
+    --primary: 40 45% 56%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 30% 96%;
+    --secondary-foreground: 0 0% 7%;
+
+    --muted: 40 20% 95%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 40 30% 96%;
+    --accent-foreground: 0 0% 7%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 20% 90%;
+    --input: 40 20% 90%;
+    --ring: 40 45% 56%;
+
+    --radius: 0.75rem;
+
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Montserrat', system-ui, sans-serif;
+
+    --shadow-card: 0 0 0 1px rgba(197, 160, 89, 0.08), 0 1px 3px rgba(0,0,0,0.04);
+    --shadow-card-hover: 0 0 0 1px rgba(197, 160, 89, 0.15), 0 10px 25px -5px rgba(0,0,0,0.06);
+    --shadow-elevated: 0 0 0 1px rgba(197, 160, 89, 0.1), 0 20px 40px -10px rgba(0,0,0,0.08);
+
+    --easing-luxury: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-card-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+  .easing-luxury {
+    transition-timing-function: var(--easing-luxury);
+  }
+}
