@@ -41,7 +41,7 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
         </p>
       </div>
 
-      <div className="flex items-center justify-between pt-1 mt-auto">
+      <div className="flex flex-col gap-3 pt-1 mt-auto sm:flex-row sm:items-center sm:justify-between">
         {product.price ? (
           <span className="font-sans font-bold text-lg text-foreground tabular-nums">
             {formatPrice(product.price)}
@@ -49,13 +49,14 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
         ) : (
           <span className="text-sm text-muted-foreground italic">Consulte o preço</span>
         )}
+
         <motion.a
           href={getWhatsAppLink(product)}
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2.5 rounded-md text-xs font-bold uppercase tracking-wider transition-opacity duration-300 hover:opacity-90"
+          className="inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-primary text-primary-foreground px-4 py-2.5 rounded-md text-xs font-bold uppercase tracking-wider transition-opacity duration-300 hover:opacity-90"
         >
           <MessageCircle size={14} />
           Comprar
@@ -66,3 +67,19 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
 };
 
 export default ProductCard;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
