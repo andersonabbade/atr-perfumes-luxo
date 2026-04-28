@@ -1,4 +1,4 @@
-# 🖤 ATR Imports - Perfumes de Luxo
+#  ATR Imports - Perfumes de Luxo
 
 Landing page moderna para uma loja de perfumes importados, desenvolvida com foco em **design premium, experiência do usuário e conversão de vendas**.
 
